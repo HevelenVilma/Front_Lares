@@ -1,0 +1,118 @@
+body {
+    background-color: var(--white);
+    background-image: url(/img/);
+    background-repeat: no-repeat;
+    background-size: 360px;
+    color: #ff66c4;
+    position: relative;
+    min-height: 100vh;
+    height: 917px;
+
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 100px;
+    background-image: url('\img\Caramelo_gif.gif');
+    background-repeat: no-repeat;
+    background-position: top -15px right -20px;
+    background-size: 100px;
+
+
+}
+
+.home__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home__logo {
+    margin-bottom: 0.5rem;
+    width: 190px;
+    
+}
+
+.home__boasvindas {
+    font-size: 48px;
+    font-weight: 550;
+    line-height: 80px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    align-items: center;
+}
+
+.home__texto {
+    width: 69%;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 1.5em;
+}
+
+.home__botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+    margin-bottom: 150px;
+
+}
+
+.home__botao {
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border-radius: 6px;
+    height: 40px;
+    width: 180px;
+    font-weight: 600;
+    font-family: var(--letra-padrao);
+    border: 1px solid var(--azul);
+    margin-bottom: 1em;
+}
+
+.home__imagem {
+    width: 20%;
+    max-width: 250px;
+    bottom: 80px;
+    left: 40%;
+    position: absolute;
+
+}
+
+@media screen and (min-width:768px) {
+    body {
+        background-size: 550px;
+    }
+
+    .home__texto {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .home__logo {
+        width: 120%;
+        margin-bottom: 0.8rem;
+        margin-top: -520px;
+
+    }
+
+    .home__botao {
+        font-size: 18px;
+        width: 250px;
+        
+    }
+
+    .home {
+        margin-top: 130px;
+    }
+
+    .home__boasvindas {
+        font-size: 28px;
+        margin-top: -250px;
+    }
+}
