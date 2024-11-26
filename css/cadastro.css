@@ -1,0 +1,111 @@
+body {
+    font-family: var(--letra-padrao);
+    background-image: url(/img/Superior-Home-Splash.png);
+    background-repeat: no-repeat;
+    background-size: 360px;  
+    min-height: 100vh;
+    position: relative;  
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1em;
+}
+
+.cabecalho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre os ícones */
+}
+
+.cabecalho__logo {
+    width: 920px; /* Adapta o tamanho para caber em diferentes telas */
+    max-width: 1024px; /* Limite máximo para evitar o crescimento excessivo */
+    margin-top: -220px;
+    
+}
+
+.cabecalho__home-usuario{
+    width: 30px; /* Tamanho dos ícones */
+    height: 30px;
+    cursor: pointer;
+
+}
+.cabecalho__email-usuario {
+    width: 27px; /* Tamanho dos ícones */
+    height: 27px;
+    cursor: pointer;
+}
+
+.cabecalho__patas {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: left 0px top 320px;
+    flex: 1;
+}
+
+.cadastro__cabecalho {
+    display: flex;
+    flex-direction: column;
+    margin-top: -180px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro__logo {
+    width: 1000px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-bottom: 75px;
+}
+
+.cadastro__texto {
+    text-align: center;
+    padding: 0 10em;
+    margin-bottom: 0;
+}
+
+/* Estilos do formulário e layout permanecem os mesmos */
+
+.cadastro__formulario {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em auto;
+}
+
+.cadastro__formulario-titulo {
+    justify-content: center;
+    color: var(--cinza-escuro);
+    line-height: 24px;
+}
+
+.cadastro__formulario-campo,
+.cadastro__formulario-campo--senha {
+    width: 100%;
+    align-items: center;
+    background: var(--cinza-claro);
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    height: 40px;
+    margin-bottom: 2em;
+    border: none;
+    text-align: center;
+    color: var(--cinza-medio);
+}
+

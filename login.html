@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login │ Adopet</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="cabecalho">
+            <div class="cabecalho__logo"></div>
+            <a href="/index.html"><img class="cabecalho__home-usuario" src="/img/Casa.png" alt="Icone Home"></a>
+            <img class="cabecalho__email" src="/img/Mensagens.png" alt="Icone Email">
+            <img class="cabecalho__patas" src="/img/Patas.png">
+        </div>
+    </header>
+    <main class="login">
+        <div class="login__cabecalho">
+            <img class="login__logo" src="/img/logo_cabeçalho.png" alt="Logo LaresFelizes">
+            <p class="login__titulo">Já possui conta? Faça seu login:</p>
+        </div>
+        <form class="login__formulario" action="/home.html" id="form-login">
+            <label class="login__formulario-titulo">Selecione o Tipo da sua conta</label>
+            <select class="login__input" id="tipo-login" required>
+                <option value="pessoa">Pessoa Física</option>
+                <option value="ong">ONG</option>
+            </select>
+
+            <label class="login__formulario-titulo">Email</label>
+            <input type="email" class="login__input" id="login" placeholder="Insira seu email" required>
+
+            <label class="login__formulario-titulo">Senha</label>
+            <input type="password" class="login__input senha visualizar" id="senha" title="A senha deve conter no mínimo 6 caracteres, pelo menos uma letra maiúscula, uma letra minúscula e um caracter especial" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{6,15}$" placeholder="Insira sua senha" required>
+
+            <div class="login__botoes">
+                <a class="login__senha">Esqueci minha senha</a>
+                <button id="botao" class="login__botao" type="submit">Entrar</button>
+            </div>
+        </form>
+    </main>
+    <footer class="rodape">
+        <p class="rodape__texto"></p>
+    </footer>
+    <script src="/js/validacao-login.js"></script>
+</body>
+</html>
