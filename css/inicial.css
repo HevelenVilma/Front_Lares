@@ -1,6 +1,5 @@
 body {
     background-color: var(--white);
-    background-image: url(/img/);
     background-repeat: no-repeat;
     background-size: 360px;
     color: #ff66c4;
@@ -10,13 +9,25 @@ body {
 
 }
 
+.cabecalho__patas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: -1; /* Fica atrás de todos os outros elementos */
+    pointer-events: none; /* Evita interferência de cliques */
+    animation: pulse 2s infinite;
+    }
+
 .home {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     margin-top: 100px;
-    background-image: url('\img\Caramelo_gif.gif');
     background-repeat: no-repeat;
     background-position: top -15px right -20px;
     background-size: 100px;
@@ -84,6 +95,30 @@ body {
 
 }
 
+.rodape {
+    background-color: #38b6ff; 
+    padding: 15px;
+    text-align: center;
+    border-top: 4.2px solid #ffc0e7;
+    margin-bottom: 0%;
+}
+
+.rodape__texto {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.rodape__icones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0px;
+}
+
+
+
 @media screen and (min-width:768px) {
     body {
         background-size: 550px;
@@ -115,4 +150,56 @@ body {
         font-size: 28px;
         margin-top: -250px;
     }
+    .rodape {
+        background-color: #38b6ff; 
+        padding: 15px;
+        text-align: center;
+        border-top: 4.2px solid #ffc0e7;
+    }
+    
+    .rodape__texto {
+        font-family: 'Arial', sans-serif;
+        color: #000000;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .rodape__icones {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .rodape__icone {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .rodape__creditos {
+        font-size: 14px;
+        color: #000000;
+        margin-top: 10px;
+    }
+    
+    /*responsividade rodape*/
+    @media (max-width: 768px) {
+        .rodape__texto {
+            font-size: 16px; 
+        }
+    
+        .rodape__icones {
+            gap: 10px; 
+        }
+    
+        .rodape__icone {
+            width: 35px; 
+            height: 35px;
+        }
+    
+        .rodape__creditos {
+            font-size: 12px; 
+        }
+    }
+
 }

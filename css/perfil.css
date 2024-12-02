@@ -1,109 +1,374 @@
-body{
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     min-height: 100vh;
-}
-.perfil__formulario{
-    width: 86.66%;
-    height: 825px;
-    background: var(--cinza-claro);
-    border-radius: 10px;
-    margin: 40px auto 0 auto;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.perfil__perfil{
-    color: var(--cinza-escuro);
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 24px;
-    margin: 30px auto 10px auto;
+.perfil__texto {
+    text-align: center;
+    font-size: 18px;
+    margin: 1em 0;
+    color:  #38b6ff;
 }
-.perfil__foto{
+
+
+.header-usuario {
+    background-color: #ffc0e7;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho__home-usuario,
+.cabecalho__email-usuario {
+    width: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cabecalho__home-usuario:hover,
+.cabecalho__email-usuario:hover {
+    transform: scale(1.2);
+}
+
+.cabecalho__perfil-usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+.perfil {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil__formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 
-.perfil__usuario{
-    width: 80px;
+.perfil__perfil {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.perfil__texto{
+.perfil__titulo--foto {
+    font-size: 16px;
     text-align: center;
-    padding: 0 60px;
-    margin-top: 80px;
-}
-.perfil__titulo--foto{
-    font-weight: 600;
-    margin: 10px 5% 0 5%;
-}
-.perfil__titulo{
-    font-weight: 600;
-    margin: 15px 5%;
+    margin-bottom: 10px;
+    color: #777;
 }
 
-.perfil__dados{
+/* Foto do Usuário */
+.perfil__foto {
+    position: relative;
     display: flex;
     flex-direction: column;
-}
-
-.perfil__campo{
-    box-shadow:  0px 2px 4px rgba(0, 0, 0, 0.15);
-    width: 90%;
-    padding: 12px;
-    border-radius: 6px;
-    border: none;
-    margin: 0 auto;
-}
-
-.perfil__mensagem{
-    width: 90%;
-    height: 172px;
-    box-shadow:  0px 2px 4px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    border: none;
-    margin: 0 auto;
-}
-
-.perfil__botao{
-    background-color: var(--vermelho);
-    color: #FFFFFF;
-    border-radius: 6px;
-    font-weight: 600;
     align-items: center;
-    justify-content: center;
-    width: 148px;
-    height: 40px;
+}
+
+.perfil__usuario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffc0e7;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    transition: transform 0.3s;
+}
+
+.perfil__usuario:hover {
+    transform: scale(1.1);
+}
+
+.perfil__upload {
+    position: absolute;
+    bottom: -10px;
+    cursor: pointer;
+    background-color: #ffc0e7;
+    color: #fff;
+    padding: 5px 10px;
     border: none;
-    margin: 35px auto 0 auto;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background-color 0.3s;
 }
-@media screen and (min-width:768px) {
-    body{
-        height: 1255px;
+
+.perfil__upload:hover {
+    background-color: #38b6ff;
+}
+
+
+.perfil__dados label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: #38b6ff;
+}
+
+.perfil__campo,
+.perfil__mensagem {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.perfil__campo:focus,
+.perfil__mensagem:focus {
+    border-color:#38b6ff;
+    outline: none;
+    background-color: #fff;
+}
+
+
+.perfil__botao {
+    padding: 10px 20px;
+    background-color: #ffc0e7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.perfil__botao:hover {
+    background-color: #ffc0e7;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.mensagens-popup {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 250px;
+    max-height: 300px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none; 
+}
+
+.mensagens-popup.oculto {
+    display: none;
+}
+
+.mensagens-popup:not(.oculto) {
+    display: block; 
+}
+
+
+.mensagens-popup.oculto {
+    display: none;
+}
+
+.mensagens-header {
+    font-size: 16px;
+    font-weight: bold;
+    background: #38b6ff;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+}
+
+.mensagens-lista {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.mensagens-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.mensagens-item:hover {
+    background: #f9f9f9;
+}
+
+.mensagens-botao {
+    background: #ff5e57;
+    color: white;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.mensagens-botao:hover {
+    background: #e04e4d;
+}
+
+/* Estilo para o botão de escolher foto */
+.perfil__escolher-foto,
+.cadastro__escolher-foto {
+    padding: 8px 15px;
+    background-color: #ffc0e7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.perfil__escolher-foto:hover,
+.cadastro__escolher-foto:hover {
+    background-color: #38b6ff;
+    transform: scale(1.05);
+}
+
+.perfil__escolher-foto:active,
+.cadastro__escolher-foto:active {
+    background-color: #38b6ff;
+    transform: scale(1);
+}
+
+/* Estilo para o botão de escolher foto dentro de um input type="file" */
+.perfil__input-foto,
+.cadastro__input-foto {
+    display: none; /* Esconde o input padrão de file */
+}
+
+/* Estilo do botão ao clicar para upload da foto */
+.perfil__foto-upload,
+.cadastro__foto-upload {
+    position: absolute;
+    bottom: -10px;
+    cursor: pointer;
+    background-color: #ffc0e7;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.perfil__foto-upload:hover,
+.cadastro__foto-upload:hover {
+    background-color: #38b6ff;
+}
+
+
+
+
+
+.rodape {
+    background-color:#ffc0e7;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.rodape__texto {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.rodape__creditos {
+    font-size: 12px;
+}
+
+
+
+/* Animação */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
     }
-    .perfil{
-        background-image: url(/img/Lateral-direita-splash.png);
-        background-position: right 0px top 150px;
-        background-size: 100px;
-        background-repeat: no-repeat;
+    50% {
+        transform: translateY(-10px);
     }
-    .perfil__formulario{
-        height: 756px;
-        width: 552px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 767px) {
+    .perfil {
+        padding: 15px;
     }
 
-    .perfil__texto{
-        margin: 200px auto 0 auto;
-        font-size: 18px;
-        width: 620px;
+    .perfil__usuario {
+        width: 100px;
+        height: 100px;
     }
 
-    .perfil__foto{
-        margin-bottom: 0px;
-    }
-    .perfil__mensagem{
-        height: 104px;
+    .perfil__botao {
+        width: 100%;
+        font-size: 14px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .perfil {
+        padding: 20px;
+    }
+
+    .perfil__usuario {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .perfil__usuario {
+        width: 140px;
+        height: 140px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .perfil__usuario, .cadastro__animal {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil__escolher-foto, .cadastro__escolher-foto {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+

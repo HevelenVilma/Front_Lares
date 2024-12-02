@@ -1,6 +1,5 @@
 body {
     font-family: var(--letra-padrao);
-    background-image: url(/img/Superior-Home-Splash.png);
     background-repeat: no-repeat;
     background-size: 360px;  
     min-height: 100vh;
@@ -10,43 +9,65 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     margin-top: 1em;
 }
 
-.cabecalho {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaço entre os ícones */
+
+.cabecalho__patas {
+    position: relative;
+    top: 10px; 
+    right: 10px; 
+    width: 100px; 
+    height: 100px; 
+    clip-path: path('M50 15 C35 0, 0 0, 0 40 C0 65, 50 100, 50 100 C50 100, 100 65, 100 40 C100 0, 65 0, 50 15 Z'); 
+    background-size: cover; 
+    z-index: 10;
+    opacity: 0.9; 
+    transition: transform 0.3s ease; 
 }
 
+
+.cabecalho__patas:hover {
+    transform: scale(1.2); 
+    opacity: 1; 
+}
+
+.gato__coracao {
+    position: relative; 
+    top: 10px; 
+    left: 10px; 
+    width: 100px; 
+    height: 100px; 
+    clip-path: path('M50 15 C35 0, 0 0, 0 40 C0 65, 50 100, 50 100 C50 100, 100 65, 100 40 C100 0, 65 0, 50 15 Z'); 
+    background: url('/img/gato-vira.jpg') no-repeat center center; 
+    background-size: cover; 
+    z-index: 10; 
+    transition: transform 0.3s ease; 
+}
+
+
+.gato__coracao:hover {
+    transform: scale(1.2); 
+    opacity: 1; 
+}
+
+
+
+
 .cabecalho__logo {
-    width: 920px; /* Adapta o tamanho para caber em diferentes telas */
-    max-width: 1024px; /* Limite máximo para evitar o crescimento excessivo */
+    width: 920px; 
+    max-width: 1024px; 
     margin-top: -220px;
     
 }
 
 .cabecalho__home-usuario{
-    width: 30px; /* Tamanho dos ícones */
+    width: 30px; 
     height: 30px;
     cursor: pointer;
 
-}
-.cabecalho__email-usuario {
-    width: 27px; /* Tamanho dos ícones */
-    height: 27px;
-    cursor: pointer;
-}
-
-.cabecalho__patas {
-    position: absolute;
-    top: -20px;
-    right: 0;
 }
 
 .cadastro {
@@ -67,7 +88,7 @@ body {
 }
 
 .cadastro__logo {
-    width: 1000px; /* Ajuste o tamanho da logo conforme necessário */
+    width: 1000px; 
     margin-bottom: 75px;
 }
 
@@ -77,7 +98,6 @@ body {
     margin-bottom: 0;
 }
 
-/* Estilos do formulário e layout permanecem os mesmos */
 
 .cadastro__formulario {
     display: flex;
@@ -107,5 +127,117 @@ body {
     border: none;
     text-align: center;
     color: var(--cinza-medio);
+}
+
+.cadastro__botoes {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    align-items: center;
+    margin-top: 2em; /* Espaçamento acima do botão */
+}
+
+.cadastro__botao {
+    background-color: #ff66c4; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+    padding: 12px 24px; /* Espaçamento interno do botão */
+    border: none; /* Remove bordas padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito suave na cor e transformação */
+}
+
+.cadastro__botao:hover {
+    background-color: #38b6ff; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento no botão */
+}
+
+.cadastro__botao:focus {
+    outline: none; /* Remove o contorno ao focar no botão */
+    box-shadow: 0 0 8px rgba(56, 182, 255, 0.6); /* Adiciona sombra quando o botão é focado */
+}
+
+.rodape {
+    background-color: #38b6ff; 
+    padding: 15px;
+    text-align: center;
+    border-top: 4.2px solid #ffc0e7;
+}
+
+.rodape__texto {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rodape__icones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.rodape__icone {
+    width: 40px;
+    height: 40px;
+}
+
+.rodape__creditos {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/*responsividade rodape*/
+@media (max-width: 768px) {
+    .rodape__texto {
+        font-size: 16px; 
+    }
+
+    .rodape__icones {
+        gap: 10px; 
+    }
+
+    .rodape__icone {
+        width: 35px; 
+        height: 35px;
+    }
+
+    .rodape__creditos {
+        font-size: 12px; 
+    }
+
+    @media (max-width: 768px) {
+        .cabecalho__patas,
+        .gato__coracao {
+            width: 80px; 
+            height: 80px;
+            top: 5px; 
+        }
+    
+        .cabecalho__patas {
+            right: 5px; 
+    
+        .gato__coracao {
+            left: 5px; 
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .cabecalho__patas,
+        .gato__coracao {
+            width: 60px; 
+            height: 60px;
+            top: 5px;
+        }
+    
+        .cabecalho__patas {
+            right: 5px;
+        }
+    
+        .gato__coracao {
+            left: 5px;
+        }
 }
 

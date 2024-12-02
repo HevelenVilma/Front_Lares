@@ -1,0 +1,143 @@
+body {
+    position: relative;
+    background-image: url('/img/patasho.png'); /* Imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+}
+
+.header-usuario {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.cabecalho-usuario {
+    display: flex;
+    gap: 2.5px;
+    align-items: center;
+}
+
+.cabecalho__home-usuario,
+.cabecalho__email-usuario, {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+
+.esqueci-senha__container {
+    background: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.esqueci-senha__logo {
+    width: 150px;
+    margin-bottom: 1em;
+}
+
+.esqueci-senha__titulo {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 1em;
+}
+
+.esqueci-senha__label {
+    font-size: 14px;
+    color: var(--cinza-escuro);
+    margin-bottom: 0.5em;
+    display: block;
+}
+
+.esqueci-senha__input {
+    width: 100%;
+    padding: 10px;
+    margin: 1em 0;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    text-align: center;
+}
+
+.esqueci-senha__botao {
+    background-color: var(--vermelho);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.esqueci-senha__botao:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+.esqueci-senha__link {
+    display: block;
+    margin-top: 1em;
+    font-size: 14px;
+    color: var(--azul);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #38b6ff;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+
+.rodape {
+    background-color: #38b6ff; 
+    padding: 15px;
+    text-align: center;
+    border-top: 4.2px solid #ffc0e7;
+}
+
+.rodape__texto {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rodape__icones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.rodape__icone {
+    width: 40px;
+    height: 40px;
+}
+
+.rodape__creditos {
+    font-size: 14px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+

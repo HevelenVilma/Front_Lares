@@ -17,12 +17,12 @@
     <header class="header">
         <div class="cabecalho">
             <a href="/index.html">
-                <img class="cabecalho__home-usuario" src="/img/Casa.png" alt="Ícone Home">
+                <img class="cabecalho__home-usuario" src="/img/casaho.png" alt="Ícone Home">
             </a>
-            <img class="cabecalho__email-usuario" src="/img/Mensagens.png" alt="Ícone Email">
         </div>
         <img class="cabecalho__logo" src="/img/Logo_cabeçalho.png" alt="Logo Lares Felizes">
         <img class="cabecalho__patas" src="/img/Caramelo_pata.jpeg">
+        <img class="gato__coracao" src="img/gato-vira.jpg">
     </header>
     <main class="cadastro">
         <div class="cadastro__cabecalho">
@@ -69,25 +69,18 @@
         </form>
     </main>
     <footer class="rodape">
-        <p class="rodape__texto"></p>
+        <div class="rodape__conteudo">
+            <p class="rodape__texto">
+                Feito com ❤️ para ajudar nossos amigos de quatro patas a encontrar um lar cheio de amor!❤️
+            </p>
+          
+            <p class="rodape__creditos">
+                © 2024 Lares Felizes 
+            </p>
+        </div>
     </footer>
 
     <script src="/js/validacao-cadastro.js"></script>
-    <script>
-        // JavaScript para alternar campos entre Pessoa Física e ONG
-        const tipoCadastro = document.getElementById('tipo-cadastro');
-        const camposPessoa = document.getElementById('campos-pessoa');
-        const camposOng = document.getElementById('campos-ong');
-
-        tipoCadastro.addEventListener('change', () => {
-            if (tipoCadastro.value === 'ong') {
-                camposPessoa.style.display = 'none';
-                camposOng.style.display = 'block';
-            } else {
-                camposPessoa.style.display = 'block';
-                camposOng.style.display = 'none';
-            }
-        });
-    </script>
+    
 </body>
 </html>
