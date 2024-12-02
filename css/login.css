@@ -1,56 +1,68 @@
-body{
-    background-image: url(/img/Superior-Home-Splash.png);
+
+
+body {
     background-repeat: no-repeat;
     background-size: 360px;
     position: relative;
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif; 
 }
 
-.login{
+.dog-icon {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  button:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+
+.login__cabecalho {
     display: flex;
     flex-direction: column;
-    background-image: url(/img/Esquerda-Splash.png);
-    background-repeat: no-repeat;
-    background-position: left 0px top 320px;
-    background-size: 75px;
-}
-.login__cabecalho{
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2em; 
 }
 
-.cabecalho__patas{
-    position: absolute;
-    top:0;
-    right: 0;
-}
-
-.login__logo{
-    width: 142px;
-    margin: 0em auto;
-    
+.cabecalho__patas {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    opacity: 0.75;
+    z-index: -1; 
 }
 
 .login__logo {
-    transform: scale(5.5); /* Aumenta o tamanho em 1.5x */
+    width: 100%;
+    max-width: 252px; 
+    margin-bottom: 2em; 
+    transform: scale(4.0); 
+    object-fit: contain; 
 }
 
-.login__cabecalho{
-    display: flex;
-    flex-direction: column;
-}
-.login__titulo{
+.login__titulo {
     text-align: center;
     padding: 0 3em;
     margin-bottom: 0;
     margin-top: 2em;
+    font-size: 18px;
 }
 
-
-.login__formulario{
+.login__formulario {
     display: flex;
     flex-direction: column;
     width: 315px;
@@ -58,20 +70,19 @@ body{
     align-items: center;
     text-align: center;
     margin: 1em auto;
-
+    padding-top: 2em;
 }
 
-.login__formulario-titulo{
+.login__formulario-titulo {
     justify-content: center;
     line-height: 24px;
     margin-bottom: 1em;
     color: var(--cinza-escuro);
 }
-.login__input{
+
+.login__input {
     width: 100%;
     margin: 0 auto;
-    align-items: center;
-    justify-content: center;
     background: var(--cinza-claro);
     border-radius: 6px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
@@ -79,25 +90,22 @@ body{
     margin-bottom: 2em;
     border: none;
     text-align: center;
+    padding-left: 10px;
 }
-.login__input:last-child{
+
+.login__input:last-child {
     margin-bottom: 0;
 }
 
-.login__input::placeholder{
+.login__input::placeholder {
     font-size: 12px;
     text-align: center;
     color: var(--cinza-medio);
 }
 
-.visualizar::placeholder{
-    background-image: url(/img/Vector.png);
-    background-repeat: no-repeat;
-    background-position: right 5px bottom -1px;
-}
 
 
-.login__botoes{
+.login__botoes {
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -106,13 +114,14 @@ body{
     margin-bottom: 100px;
 }
 
-.login__senha{
+.login__senha {
     color: var(--vermelho);
     text-decoration: underline;
     margin-bottom: 2em;
     font-size: 12px;
 }
-.login__botao{
+
+.login__botao {
     background-color: var(--vermelho);
     color: #FFFFFF;
     border-radius: 6px;
@@ -122,41 +131,170 @@ body{
     font-family: var(--letra-padrao);
     border: 1px solid var(--azul);
     margin-bottom: 15em;
-
 }
-@media screen and (min-width:768px) {
-    body{
-        background-size: 550px;
+
+
+@media screen and (max-width: 767px) {
+    body {
+        background-size: 250px;
     }
-    .login__logo{
-        margin-top: 50px;
-        width: 252px;
-    }
-    .login{
-        background-image: url(/img/Lateral-direita-splash.png);
-        background-position: right 0px top 150px;
-        background-size: 100px;
-    }
+
     
-    .login__titulo{
-        font-size: 18px;
+
+    .login__logo {
+        width: 100%;
+        max-width: 200px; 
+        margin-bottom: 1em; 
+        transform: scale(3.5); 
     }
-    .login__input-ultimo::placeholder{
+
+    .login__titulo {
+        font-size: 16px; 
+    }
+
+    .login__formulario {
+        width: 85%;
+        padding-top: 1em; 
+    }
+
+    .login__input {
+        font-size: 14px; 
+    }
+
+    .login__botao {
+        font-size: 14px;
+        width: 100%; 
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-size: 400px;
+    }
+
+    .login__logo {
+        width: 100%;
+        max-width: 220px; 
+    }
+
+    .login__titulo {
+        font-size: 18px; 
+    }
+
+    .login__formulario {
+        width: 80%;
+    }
+
+    .login__input {
         font-size: 14px;
     }
-    .login__botao{
-        font-size: 18px;
+
+    .login__botao {
+        font-size: 16px;
     }
 }
 
-@media screen and (min-width:1440px){
-    .login__formulario{
-        width: 552px;
+
+@media screen and (min-width: 1025px) {
+    body {
+        background-size: 550px;
     }
-    .senha{
-        width: 362px;
+
+    
+
+    .login__logo {
+        width: 100%;
+        max-width: 252px; 
+        margin-bottom: 3em; 
     }
-    .login__input::placeholder{
-    font-size: 16px;
+
+    .login__titulo {
+        font-size: 20px; 
     }
+
+    .login__formulario {
+        width: 450px; 
+    }
+
+    .login__input {
+        font-size: 16px;
+    }
+
+    .login__botao {
+        font-size: 18px;
+        width: 200px; 
+    }
+
+    .rodape {
+        background-color: #38b6ff; 
+        padding: 15px;
+        text-align: center;
+        border-top: 4.2px solid #ffc0e7;
+    }
+    
+    .rodape__texto {
+        font-family: 'Arial', sans-serif;
+        color: #000000;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .rodape__icones {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .rodape__icone {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .rodape__creditos {
+        font-size: 14px;
+        color: #000000;
+        margin-top: 10px;
+    }
+    
+    /*responsividade rodape*/
+    @media (max-width: 768px) {
+        .rodape__texto {
+            font-size: 16px; 
+        }
+    
+        .rodape__icones {
+            gap: 10px; 
+        }
+    
+        .rodape__icone {
+            width: 35px; 
+            height: 35px;
+        }
+    
+        .rodape__creditos {
+            font-size: 12px; 
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .rodape__texto {
+            font-size: 14px; 
+        }
+    
+        .rodape__icones {
+            gap: 8px; 
+        }
+    
+        .rodape__icone {
+            width: 30px; 
+            height: 30px;
+        }
+    
+        .rodape__creditos {
+            font-size: 12px; 
+        }
+    }
+    
 }

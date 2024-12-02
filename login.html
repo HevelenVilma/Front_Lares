@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login │ Adopet</title>
+    <title>Login │ LaresFelizes</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/login.css">
@@ -17,9 +17,9 @@
     <header class="header">
         <div class="cabecalho">
             <div class="cabecalho__logo"></div>
-            <a href="/index.html"><img class="cabecalho__home-usuario" src="/img/Casa.png" alt="Icone Home"></a>
-            <img class="cabecalho__email" src="/img/Mensagens.png" alt="Icone Email">
-            <img class="cabecalho__patas" src="/img/Patas.png">
+            <a href="/index.html"><img class="cabecalho__home-usuario" src="/img/casaho.png" alt="Icone Home"></a>
+            <img class="cabecalho__email" src="/img/mensagemho.png" alt="Icone Email">
+            <img class="cabecalho__patas" src="/img/patasho.png">
         </div>
     </header>
     <main class="login">
@@ -41,13 +41,23 @@
             <input type="password" class="login__input senha visualizar" id="senha" title="A senha deve conter no mínimo 6 caracteres, pelo menos uma letra maiúscula, uma letra minúscula e um caracter especial" pattern="^(?=.*[A-Z])(?=.*[!#@$%&])(?=.*[0-9])(?=.*[a-z]).{6,15}$" placeholder="Insira sua senha" required>
 
             <div class="login__botoes">
-                <a class="login__senha">Esqueci minha senha</a>
+                <a href="Esqueci-senha.html" class="login__senha">Esqueci minha senha</a>
                 <button id="botao" class="login__botao" type="submit">Entrar</button>
             </div>
+            <img src="\img\cachorroL.png" alt="Cachorro" class="dog-icon">
+
         </form>
     </main>
     <footer class="rodape">
-        <p class="rodape__texto"></p>
+        <div class="rodape__conteudo">
+            <p class="rodape__texto">
+                Feito com ❤️ para ajudar nossos amigos de quatro patas a encontrar um lar cheio de amor!❤️
+            </p>
+          
+            <p class="rodape__creditos">
+                © 2024 Lares Felizes 
+            </p>
+        </div>
     </footer>
     <script src="/js/validacao-login.js"></script>
 </body>
